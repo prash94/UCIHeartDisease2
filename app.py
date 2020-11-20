@@ -29,7 +29,7 @@ def predict():
 
     # prediction_text is returned here will replace {{ prediction_text }} on the template
     return render_template('index.html',
-                           prediction_text='Risk of this patient to have a heart disease is {}'.format(output))
+                           prediction_text='Risk of this patient to have a heart disease is {}%'.format(round(output*100,0)))
 
 
 # main function to run this flask app
