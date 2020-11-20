@@ -24,7 +24,7 @@ def predict():
     # for rendering results in HTML GUI
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
-    prediction = model.predict_proba(final_features)
+    prediction = model.predict(final_features)
     output = prediction[0]
 
     # prediction_text is returned here will replace {{ prediction_text }} on the template
